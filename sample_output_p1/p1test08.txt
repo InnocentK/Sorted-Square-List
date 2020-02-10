@@ -1,0 +1,90 @@
+Adding 10:
+SortedSquareList::dump(): m_size = 1
+[0] SSLColumn::dump(): m_size = 1
+[0] 10, 
+Adding 20:
+SortedSquareList::dump(): m_size = 1
+[0] SSLColumn::dump(): m_size = 2
+[0] 10, [1] 20, 
+Adding 30:
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 10, [1] 20, 
+[1] SSLColumn::dump(): m_size = 1
+[1] 30, 
+Adding 40:
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 10, [1] 20, 
+[1] SSLColumn::dump(): m_size = 2
+[1] 30, [0] 40, 
+Adding 50:
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 10, [1] 20, 
+[1] SSLColumn::dump(): m_size = 3
+[0] 30, [1] 40, [2] 50, 
+Adding 60:
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 3
+[0] 10, [1] 20, [2] 30, 
+[1] SSLColumn::dump(): m_size = 3
+[1] 40, [2] 50, [3] 60, 
+Adding 70:
+SortedSquareList::dump(): m_size = 3
+[3] SSLColumn::dump(): m_size = 1
+[0] 10, 
+[0] SSLColumn::dump(): m_size = 3
+[1] 20, [2] 30, [3] 40, 
+[1] SSLColumn::dump(): m_size = 3
+[2] 50, [3] 60, [0] 70, 
+Adding 80:
+SortedSquareList::dump(): m_size = 3
+[3] SSLColumn::dump(): m_size = 2
+[0] 10, [1] 20, 
+[0] SSLColumn::dump(): m_size = 3
+[2] 30, [3] 40, [0] 50, 
+[1] SSLColumn::dump(): m_size = 3
+[3] 60, [0] 70, [1] 80, 
+Adding 90:
+SortedSquareList::dump(): m_size = 3
+[3] SSLColumn::dump(): m_size = 3
+[0] 10, [1] 20, [2] 30, 
+[0] SSLColumn::dump(): m_size = 3
+[3] 40, [0] 50, [1] 60, 
+[1] SSLColumn::dump(): m_size = 3
+[0] 70, [1] 80, [2] 90, 
+Adding 25:
+SortedSquareList::dump(): m_size = 3
+[3] SSLColumn::dump(): m_size = 4
+[0] 10, [1] 20, [2] 25, [3] 30, 
+[0] SSLColumn::dump(): m_size = 3
+[3] 40, [0] 50, [1] 60, 
+[1] SSLColumn::dump(): m_size = 3
+[0] 70, [1] 80, [2] 90, 
+Adding 85:
+SortedSquareList::dump(): m_size = 3
+[3] SSLColumn::dump(): m_size = 4
+[0] 10, [1] 20, [2] 25, [3] 30, 
+[0] SSLColumn::dump(): m_size = 3
+[3] 40, [0] 50, [1] 60, 
+[1] SSLColumn::dump(): m_size = 4
+[0] 70, [1] 80, [2] 85, [3] 90, 
+Adding 75:
+SortedSquareList::dump(): m_size = 3
+[3] SSLColumn::dump(): m_size = 4
+[0] 10, [1] 20, [2] 25, [3] 30, 
+[0] SSLColumn::dump(): m_size = 4
+[3] 40, [0] 50, [1] 60, [2] 70, 
+[1] SSLColumn::dump(): m_size = 4
+[0] 75, [1] 80, [2] 85, [3] 90, 
+Adding 55:
+SortedSquareList::dump(): m_size = 4
+[3] SSLColumn::dump(): m_size = 4
+[0] 10, [1] 20, [2] 25, [3] 30, 
+[0] SSLColumn::dump(): m_size = 4
+[3] 40, [0] 50, [1] 55, [2] 60, 
+[1] SSLColumn::dump(): m_size = 4
+[3] 70, [0] 75, [1] 80, [2] 85, 
+[2] SSLColumn::dump(): m_size = 1
+[3] 90, 

@@ -1,0 +1,108 @@
+Script started on Thu 22 Feb 2018 07:49:31 PM EST
+[?1034hbash-4.1$ tXX.out
+bash: tXX.out: command not found
+bash-4.1$ ./tXX.out
+<cmd arg>: a 10
+SortedSquareList::dump(): m_size = 1
+[0] SSLColumn::dump(): m_size = 1
+[0] 10, 
+<cmd arg>: a 20
+SortedSquareList::dump(): m_size = 1
+[0] SSLColumn::dump(): m_size = 2
+[0] 10, [1] 20, 
+<cmd arg>: a 30
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 10, [1] 20, 
+[1] SSLColumn::dump(): m_size = 1
+[1] 30, 
+<cmd arg>: a 40
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 10, [1] 20, 
+[1] SSLColumn::dump(): m_size = 2
+[1] 30, [0] 40, 
+<cmd arg>: a 50
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 10, [1] 20, 
+[1] SSLColumn::dump(): m_size = 3
+[0] 30, [1] 40, [2] 50, 
+<cmd arg>: a 60
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 3
+[0] 10, [1] 20, [2] 30, 
+[1] SSLColumn::dump(): m_size = 3
+[1] 40, [2] 50, [3] 60, 
+<cmd arg>: a 70
+SortedSquareList::dump(): m_size = 3
+[3] SSLColumn::dump(): m_size = 1
+[0] 10, 
+[0] SSLColumn::dump(): m_size = 3
+[1] 20, [2] 30, [3] 40, 
+[1] SSLColumn::dump(): m_size = 3
+[2] 50, [3] 60, [0] 70, 
+<cmd arg>: a 80
+SortedSquareList::dump(): m_size = 3
+[3] SSLColumn::dump(): m_size = 2
+[0] 10, [1] 20, 
+[0] SSLColumn::dump(): m_size = 3
+[2] 30, [3] 40, [0] 50, 
+[1] SSLColumn::dump(): m_size = 3
+[3] 60, [0] 70, [1] 80, 
+<cmd arg>: a 90
+SortedSquareList::dump(): m_size = 3
+[3] SSLColumn::dump(): m_size = 3
+[0] 10, [1] 20, [2] 30, 
+[0] SSLColumn::dump(): m_size = 3
+[3] 40, [0] 50, [1] 60, 
+[1] SSLColumn::dump(): m_size = 3
+[0] 70, [1] 80, [2] 90, 
+<cmd arg>: a 5
+SortedSquareList::dump(): m_size = 3
+[3] SSLColumn::dump(): m_size = 4
+[3] 5, [0] 10, [1] 20, [2] 30, 
+[0] SSLColumn::dump(): m_size = 3
+[3] 40, [0] 50, [1] 60, 
+[1] SSLColumn::dump(): m_size = 3
+[0] 70, [1] 80, [2] 90, 
+<cmd arg>: a 7
+SortedSquareList::dump(): m_size = 3
+[3] SSLColumn::dump(): m_size = 4
+[3] 5, [0] 7, [1] 10, [2] 20, 
+[0] SSLColumn::dump(): m_size = 4
+[2] 30, [3] 40, [0] 50, [1] 60, 
+[1] SSLColumn::dump(): m_size = 3
+[0] 70, [1] 80, [2] 90, 
+<cmd arg>: a 35
+SortedSquareList::dump(): m_size = 3
+[3] SSLColumn::dump(): m_size = 4
+[3] 5, [0] 7, [1] 10, [2] 20, 
+[0] SSLColumn::dump(): m_size = 4
+[2] 30, [3] 35, [0] 40, [1] 50, 
+[1] SSLColumn::dump(): m_size = 4
+[3] 60, [0] 70, [1] 80, [2] 90, 
+<cmd arg>: a 9
+SortedSquareList::dump(): m_size = 4
+[3] SSLColumn::dump(): m_size = 4
+[3] 5, [0] 7, [1] 9, [2] 10, 
+[0] SSLColumn::dump(): m_size = 4
+[1] 20, [2] 30, [3] 35, [0] 40, 
+[1] SSLColumn::dump(): m_size = 4
+[2] 50, [3] 60, [0] 70, [1] 80, 
+[2] SSLColumn::dump(): m_size = 1
+[3] 90, 
+<cmd arg>: a 75
+SortedSquareList::dump(): m_size = 4
+[3] SSLColumn::dump(): m_size = 4
+[3] 5, [0] 7, [1] 9, [2] 10, 
+[0] SSLColumn::dump(): m_size = 4
+[1] 20, [2] 30, [3] 35, [0] 40, 
+[1] SSLColumn::dump(): m_size = 4
+[2] 50, [3] 60, [0] 70, [1] 75, 
+[2] SSLColumn::dump(): m_size = 2
+[2] 80, [3] 90, 
+<cmd arg>: x 0
+bash-4.1$ exit
+
+Script done on Thu 22 Feb 2018 07:51:10 PM EST

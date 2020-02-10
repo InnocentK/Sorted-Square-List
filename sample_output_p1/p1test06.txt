@@ -1,0 +1,29 @@
+buf = 0x2039030, cap = 2, size = 0, start = 0, end = 0
+SortedSquareList::dump(): m_size = 1
+[0] SSLColumn::dump(): m_size = 1
+[0] 45, 
+SortedSquareList::dump(): m_size = 1
+[0] SSLColumn::dump(): m_size = 2
+[0] 45, [1] 46, 
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 45, [1] 46, 
+[1] SSLColumn::dump(): m_size = 2
+[0] 47, [1] 48, 
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 1
+[0] 45, 
+[1] SSLColumn::dump(): m_size = 1
+[0] 47, 
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 1
+[0] 45, 
+[1] SSLColumn::dump(): m_size = 2
+[0] 47, [1] 48, 
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 45, [1] 46, 
+[1] SSLColumn::dump(): m_size = 2
+[0] 47, [1] 48, 
+find(47): returned 2
+findAt(1): returned 46

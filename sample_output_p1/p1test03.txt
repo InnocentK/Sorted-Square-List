@@ -1,0 +1,12 @@
+SSLColumn::dump(): m_size = 2
+[0] 47, [1] 49, 
+>>>add() to full column: should trigger exception
+exception caught: add: column full
+>>>addFirst() to full column: should trigger exception
+exception caught: addFirst: column full
+>>>addLast() to full column: should trigger exception
+exception caught: addLast: column full
+>>>findAt() on too-high index: should trigger exception
+exception caught: findAt: bad position
+>>>findAt() on < -1 index: should trigger exception
+exception caught: findAt: bad position

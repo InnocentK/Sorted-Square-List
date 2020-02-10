@@ -1,0 +1,331 @@
+Script started on Fri 23 Feb 2018 03:55:36 PM EST
+[wambugu1@linux1 proj1]make[K[K[K[Kcat makefile
+CXX = g++
+CXXFLAGS = -gstabs+
+
+all: t01.out t02.out t03.out t06.out t07.out t08.out tXX.out proj1.out
+
+t01.out: SortedSquareList.o SSLColumn.o p1test01.cpp
+	$(CXX) $(CXXFLAGS) SortedSquareList.o SSLColumn.o p1test01.cpp -o t01.out
+
+t02.out: SortedSquareList.o SSLColumn.o p1test02.cpp
+	$(CXX) $(CXXFLAGS) SortedSquareList.o SSLColumn.o p1test02.cpp -o t02.out
+
+t03.out: SortedSquareList.o SSLColumn.o p1test03.cpp
+	$(CXX) $(CXXFLAGS) SortedSquareList.o SSLColumn.o p1test03.cpp -o t03.out
+
+t06.out: SortedSquareList.o SSLColumn.o p1test06.cpp
+	$(CXX) $(CXXFLAGS) SortedSquareList.o SSLColumn.o p1test06.cpp -o t06.out
+
+t07.out: SortedSquareList.o SSLColumn.o p1test07.cpp
+	$(CXX) $(CXXFLAGS) SortedSquareList.o SSLColumn.o p1test07.cpp -o t07.out
+
+t08.out: SortedSquareList.o SSLColumn.o p1test08.cpp
+	$(CXX) $(CXXFLAGS) SortedSquareList.o SSLColumn.o p1test08.cpp -o t08.out
+
+tXX.out: SortedSquareList.o SSLColumn.o p1testXX.cpp
+	$(CXX) $(CXXFLAGS) SortedSquareList.o SSLColumn.o p1testXX.cpp -o tXX.out
+
+proj1.out: SortedSquareList.o SSLColumn.o driver.cpp
+	$(CXX) $(CXXFLAGS) SortedSquareList.o SSLColumn.o driver.cpp -o proj1.out
+
+SortedSquareList.o: SortedSquareList.cpp  SortedSquareList.h SSLColumn.o
+	$(CXX) $(CXXFLAGS) -c SortedSquareList.cpp
+
+SSLColumn.o: SSLColumn.cpp SSLColumn.h
+	$(CXX) $(CXXFLAGS) -c SSLColumn.cpp
+
+run:
+	./proj1.out
+
+test1:
+	./t01.out
+
+test2:
+	./t02.out
+
+test3:
+	./t03.out
+
+test6:
+	./t06.out
+
+test7:
+	./t07.out
+
+test8:
+	./t08.out
+
+testx:
+	./tXX.out
+
+val:
+	valgrind ./proj1.out
+
+val1:
+	valgrind ./t01.out
+
+val2:
+	valgrind ./t02.out
+
+val3:
+	valgrind ./t03.out
+
+val6:
+	valgrind ./t06.out
+
+val7:
+	valgrind ./t07.out
+
+val8:
+	valgrind ./t08.out
+
+valx:
+	valgrind ./tXX.out
+
+clean:
+	rm *~
+
+cleaner:
+	rm *.o
+
+cleanest:
+	rm *~
+	rm *.o[wambugu1@linux1 proj1]make
+g++ -gstabs+ -c SSLColumn.cpp
+g++ -gstabs+ -c SortedSquareList.cpp
+g++ -gstabs+ SortedSquareList.o SSLColumn.o p1test01.cpp -o t01.out
+g++ -gstabs+ SortedSquareList.o SSLColumn.o p1test02.cpp -o t02.out
+g++ -gstabs+ SortedSquareList.o SSLColumn.o p1test03.cpp -o t03.out
+g++ -gstabs+ SortedSquareList.o SSLColumn.o p1test06.cpp -o t06.out
+g++ -gstabs+ SortedSquareList.o SSLColumn.o p1test07.cpp -o t07.out
+g++ -gstabs+ SortedSquareList.o SSLColumn.o p1test08.cpp -o t08.out
+g++ -gstabs+ SortedSquareList.o SSLColumn.o p1testXX.cpp -o tXX.out
+g++ -gstabs+ SortedSquareList.o SSLColumn.o driver.cpp -o proj1.out
+[wambugu1@linux1 proj1]make val1
+valgrind ./t01.out
+==23177== Memcheck, a memory error detector
+==23177== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==23177== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==23177== Command: ./t01.out
+==23177== 
+buf = 0x4c36040, cap = 8, size = 0, start =0, end = 0
+ 45 | 45 | 46 | 45 | 46 | 48 | 49 | 50 | 45 | 46 | 47 | 48 | 49 | 50 | 47 | 48 | 49 | 50 | 47 | 49 | 50 | 47 | 48 | 49 | 50 | 45 | 47 | 48 | 49 | 50 | 45 | 47 | 48 | 49 | 50 | 51 | 52 | 53 |find(52): returned 6
+findAt(1): returned 47
+==23177== 
+==23177== HEAP SUMMARY:
+==23177==     in use at exit: 0 bytes in 0 blocks
+==23177==   total heap usage: 1 allocs, 1 frees, 32 bytes allocated
+==23177== 
+==23177== All heap blocks were freed -- no leaks are possible
+==23177== 
+==23177== For counts of detected and suppressed errors, rerun with: -v
+==23177== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+[wambugu1@linux1 proj1]make val1[K2
+valgrind ./t02.out
+==23201== Memcheck, a memory error detector
+==23201== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==23201== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==23201== Command: ./t02.out
+==23201== 
+>>>Results of default constructor:
+buf = 0x4c36040, cap = 2, size = 0, start =0, end = 0
+>>>Adding 47, then 46:
+ 46 | 47 |>>>Testing size() and capacity(): returned 2 and 2
+>>>Testing copy constructor on dynamic object: results should be IDENTICAL:
+  (except for buf addr)
+orig: buf = 0x4c36040, cap = 2, size = 2, start =0, end = 0
+copy: buf = 0x4c360f0, cap = 2, size = 2, start =0, end = 0
+ 46 | 47 |>>>Calling destructor
+>>>Testing default constructor on dynamic object
+Nothing to print
+>>>Now calling overloaded operator=
+buf = 0x4c361f0, cap = 2, size = 2, start =0, end = 2
+ 46 | 47 |>>>Dynamically creating col3 w/size==8
+buf = 0x4c362a0, cap = 8, size = 0, start =0, end = 0
+>>>Now calling overloaded operator= to copy in-place into larger column
+buf = 0x4c36300, cap = 8, size = 2, start =0, end = 2
+ 46 | 47 |>>>Testing addFirst() and addLast()
+ 1 | 46 | 47 | 99 |>>>Now calling overloaded operator= to copy in-place into smaller column
+col2 before: buf = 0x4c361f0, cap = 2, size = 2, start =0, end = 2
+col2 after: buf = 0x4c36360, cap = 8, size = 4, start =0, end = 4
+ 1 | 46 | 47 | 99 |>>>Testing removeFirst() and removeLast()
+ 46 | 47 |==23201== 
+==23201== HEAP SUMMARY:
+==23201==     in use at exit: 0 bytes in 0 blocks
+==23201==   total heap usage: 10 allocs, 10 frees, 200 bytes allocated
+==23201== 
+==23201== All heap blocks were freed -- no leaks are possible
+==23201== 
+==23201== For counts of detected and suppressed errors, rerun with: -v
+==23201== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+[wambugu1@linux1 proj1]make val2[K3
+valgrind ./t03.out
+==23206== Memcheck, a memory error detector
+==23206== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==23206== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==23206== Command: ./t03.out
+==23206== 
+ 47 | 49 |>>>add() to full column: should trigger exception
+exception caught: Cannot add; column is out of room
+>>>addFirst() to full column: should trigger exception
+exception caught: Cannot add to first; column is out of room
+>>>addLast() to full column: should trigger exception
+exception caught: Cannot add to last; column is out of room
+>>>findAt() on too-high index: should trigger exception
+exception caught: Cannot find position; not in column
+>>>findAt() on < -1 index: should trigger exception
+==23206== 
+==23206== HEAP SUMMARY:
+==23206==     in use at exit: 0 bytes in 0 blocks
+==23206==   total heap usage: 9 allocs, 9 frees, 835 bytes allocated
+==23206== 
+==23206== All heap blocks were freed -- no leaks are possible
+==23206== 
+==23206== For counts of detected and suppressed errors, rerun with: -v
+==23206== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+[wambugu1@linux1 proj1]make val3[K6
+valgrind ./t06.out
+==23222== Memcheck, a memory error detector
+==23222== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==23222== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==23222== Command: ./t06.out
+==23222== 
+buf = 0x4c36040, cap = 2, size = 0, start = 0, end = 0
+Column 0: 45 |
+Column 0: 45 | 46 |
+Column 0: 45 | 46 |
+Column 1: 47 | 48 |
+Column 0: 45 | 47 |
+Column 0: 45 | 47 |
+Column 1: 48 |
+Column 0: 45 | 46 |
+Column 1: 47 | 48 |
+find(47): returned 2
+findAt(1): returned 46
+==23222== 
+==23222== HEAP SUMMARY:
+==23222==     in use at exit: 0 bytes in 0 blocks
+==23222==   total heap usage: 18 allocs, 18 frees, 328 bytes allocated
+==23222== 
+==23222== All heap blocks were freed -- no leaks are possible
+==23222== 
+==23222== For counts of detected and suppressed errors, rerun with: -v
+==23222== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+[wambugu1@linux1 proj1]make val6[K7
+valgrind ./t07.out
+==23228== Memcheck, a memory error detector
+==23228== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==23228== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==23228== Command: ./t07.out
+==23228== 
+Fresh list:
+buf = 0x4c36040, cap = 2, size = 0, start = 0, end = 0
+After adding 45, 48, 46:
+Column 0: 45 | 46 |
+Column 1: 48 |
+>>>Testing size() and capacity(): expecting 3, 4; got 3, 16
+Adding 47:
+orig: buf = 0x4c36240, cap = 4, size = 2, start = 0, end = 2
+Column 0: 45 | 46 |
+Column 1: 47 | 48 |
+>>>Testing copy constructor on dynamic object:
+results should be IDENTICAL to above (except for buf addr):
+copy: buf = 0x4c36710, cap = 4, size = 2, start = 0, end = 2
+Column 0: 45 | 46 |
+Column 1: 47 | 48 |
+>>>Calling destructor
+>>>Now calling overloaded operator= :
+Column 0: 45 | 46 |
+Column 1: 47 | 48 |
+>>>Triggering growth: adding 49, cap should grow to 4 cols
+buf = 0x4c36d90, cap = 4, size = 3, start = 0, end = 3
+Column 0: 45 | 46 |
+Column 1: 47 | 48 |
+Column 2: 49 |
+>>>Now calling overloaded operator= to copy in-place into larger list
+orig: buf = 0x4c36240, cap = 4, size = 2, start = 0, end = 2
+copy: buf = 0x4c371a0, cap = 4, size = 2, start = 0, end = 2
+Column 0: 45 | 46 |
+Column 1: 47 | 48 |
+Shrinking list to {45, 47}
+>>>Then calling overloaded operator= to copy in-place into smaller square list
+orig: buf = 0x4c375b0, cap = 4, size = 2, start = 0, end = 2
+Column 0: 45 | 47 |
+==23228== 
+==23228== HEAP SUMMARY:
+==23228==     in use at exit: 0 bytes in 0 blocks
+==23228==   total heap usage: 74 allocs, 74 frees, 1,328 bytes allocated
+==23228== 
+==23228== All heap blocks were freed -- no leaks are possible
+==23228== 
+==23228== For counts of detected and suppressed errors, rerun with: -v
+==23228== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+[wambugu1@linux1 proj1]make val7[K8
+valgrind ./t08.out
+==23246== Memcheck, a memory error detector
+==23246== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==23246== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==23246== Command: ./t08.out
+==23246== 
+Adding 10:
+Column 0: 10 |
+Adding 20:
+Column 0: 10 | 20 |
+Adding 30:
+Column 0: 10 | 20 |
+Column 1: 30 |
+Adding 40:
+Column 0: 10 | 20 |
+Column 1: 30 | 40 |
+Adding 50:
+Column 0: 10 | 20 |
+Column 1: 30 | 40 |
+Column 2: 50 |
+Adding 60:
+Column 0: 10 | 20 | 30 |
+Column 1: 40 | 50 |
+Column 2: 60 |
+Adding 70:
+Column 0: 10 | 20 | 30 |
+Column 1: 40 | 50 | 60 |
+Column 2: 70 |
+Adding 80:
+Column 0: 10 | 20 | 30 |
+Column 1: 40 | 50 | 60 |
+Column 2: 70 | 80 |
+Adding 90:
+Column 0: 10 | 20 | 30 |
+Column 1: 40 | 50 | 60 |
+Column 2: 70 | 80 | 90 |
+Adding 25:
+Column 0: 10 | 20 | 25 |
+Column 1: 30 | 40 | 50 |
+Column 2: 60 | 70 | 80 |
+Column 3: 90 |
+Adding 85:
+Column 0: 10 | 20 | 25 | 30 |
+Column 1: 40 | 50 | 60 | 70 |
+Column 2: 80 | 85 | 90 |
+Adding 75:
+Column 0: 10 | 20 | 25 | 30 |
+Column 1: 40 | 50 | 60 | 70 |
+Column 2: 75 | 80 | 85 | 90 |
+Adding 55:
+Column 0: 10 | 20 | 25 | 30 |
+Column 1: 40 | 50 | 55 | 60 |
+Column 2: 70 | 75 | 80 | 85 |
+Column 3: 90 |
+==23246== 
+==23246== HEAP SUMMARY:
+==23246==     in use at exit: 0 bytes in 0 blocks
+==23246==   total heap usage: 40 allocs, 40 frees, 1,000 bytes allocated
+==23246== 
+==23246== All heap blocks were freed -- no leaks are possible
+==23246== 
+==23246== For counts of detected and suppressed errors, rerun with: -v
+==23246== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+[wambugu1@linux1 proj1]exit
+exit
+
+Script done on Fri 23 Feb 2018 03:57:48 PM EST

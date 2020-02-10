@@ -1,0 +1,37 @@
+>>>Results of default constructor:
+buf = 0x1f08010, cap = 2, size = 0, start =0, end = 0
+>>>Adding 47, then 46:
+SSLColumn::dump(): m_size = 2
+[1] 46, [0] 47, 
+>>>Testing size() and capacity(): returned 2 and 2
+>>>Testing copy constructor on dynamic object: results should be IDENTICAL:
+  (except for buf addr)
+orig: buf = 0x1f08010, cap = 2, size = 2, start =1, end = 1
+copy: buf = 0x1f08050, cap = 2, size = 2, start =1, end = 1
+SSLColumn::dump(): m_size = 2
+[1] 46, [0] 47, 
+>>>Calling destructor
+>>>Testing default constructor on dynamic object
+SSLColumn::dump(): m_size = 0
+
+>>>Now calling overloaded operator=
+buf = 0x1f08050, cap = 2, size = 2, start =0, end = 0
+SSLColumn::dump(): m_size = 2
+[0] 46, [1] 47, 
+>>>Dynamically creating col3 w/size==8
+buf = 0x1f08090, cap = 8, size = 0, start =0, end = 0
+>>>Now calling overloaded operator= to copy in-place into larger column
+buf = 0x1f08090, cap = 8, size = 2, start =0, end = 2
+SSLColumn::dump(): m_size = 2
+[0] 46, [1] 47, 
+>>>Testing addFirst() and addLast()
+SSLColumn::dump(): m_size = 4
+[7] 1, [0] 46, [1] 47, [2] 99, 
+>>>Now calling overloaded operator= to copy in-place into smaller column
+col2 before: buf = 0x1f08050, cap = 2, size = 2, start =0, end = 0
+col2 after: buf = 0x1f080c0, cap = 8, size = 4, start =0, end = 4
+SSLColumn::dump(): m_size = 4
+[0] 1, [1] 46, [2] 47, [3] 99, 
+>>>Testing removeFirst() and removeLast()
+SSLColumn::dump(): m_size = 2
+[0] 46, [1] 47, 

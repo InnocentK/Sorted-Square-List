@@ -1,0 +1,54 @@
+Fresh list:
+buf = 0x645030, cap = 2, size = 0, start = 0, end = 0
+After adding 45, 48, 46:
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 45, [1] 46, 
+[1] SSLColumn::dump(): m_size = 1
+[1] 48, 
+>>>Testing size() and capacity(): expecting 3, 4; got 3, 4
+Adding 47:
+orig: buf = 0x645030, cap = 2, size = 2, start = 0, end = 0
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 45, [1] 46, 
+[1] SSLColumn::dump(): m_size = 2
+[0] 47, [1] 48, 
+>>>Testing copy constructor on dynamic object:
+results should be IDENTICAL to above (except for buf addr):
+copy: buf = 0x645120, cap = 2, size = 2, start = 0, end = 0
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 45, [1] 46, 
+[1] SSLColumn::dump(): m_size = 2
+[0] 47, [1] 48, 
+>>>Calling destructor
+>>>Now calling overloaded operator= :
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 45, [1] 46, 
+[1] SSLColumn::dump(): m_size = 2
+[0] 47, [1] 48, 
+>>>Triggering growth: adding 49, cap should grow to 4 cols
+buf = 0x6452a0, cap = 4, size = 2, start = 0, end = 2
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 45, [1] 46, 
+[1] SSLColumn::dump(): m_size = 3
+[0] 47, [1] 48, [2] 49, 
+>>>Now calling overloaded operator= to copy in-place into larger list
+orig: buf = 0x645030, cap = 2, size = 2, start = 0, end = 0
+copy: buf = 0x6452a0, cap = 4, size = 2, start = 0, end = 2
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 2
+[0] 45, [1] 46, 
+[1] SSLColumn::dump(): m_size = 2
+[0] 47, [1] 48, 
+Shrinking list to {45, 47}
+>>>Then calling overloaded operator= to copy in-place into smaller square list
+orig: buf = 0x645030, cap = 2, size = 2, start = 0, end = 2
+SortedSquareList::dump(): m_size = 2
+[0] SSLColumn::dump(): m_size = 1
+[0] 45, 
+[1] SSLColumn::dump(): m_size = 1
+[0] 47, 
